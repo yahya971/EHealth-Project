@@ -18,35 +18,36 @@
               <div class="col-lg-7">
                   <div class="card bg-secondary shadow border-0">
                     <div class="text-center">
-                    <p class="h3">Recover Password</p>
+                    <p class="h3">Recuperer Mot de Passe</p>
                     </div>
-                      <div class="card-body px-lg-5 py-lg-5">
-                          <form role="form" style="margin-top: 25px;margin-bottom: 25px;">
-                              <div class="form-group mb-3" [ngClass]="{'focused':focus===true}">
-                                  <div class="input-group input-group-alternative">
-                                      <div class="input-group-prepend">
-                                          <span class="input-group-text"><i class="ni ni-email-83"></i></span>
-                                      </div>
-                                      <input class="form-control" placeholder="Email" type="email" (focus)="focus=true" (blur)="focus=false">
-                                  </div>
-                              </div>
-                              <div class="form-group mb-3" ngbDropdown>
-                                <select class="form-control" placeholder="Specialité" type="" (focus)="focus=true" (blur)="focus=false">
-                                  <option  value="abc" selected>Favorite food ?</option>
-                                  <option  value="abc">hij</option>
-                                  <option  value="abc">klm</option>
-                                </select>
-                              </div>
-                              <div class="form-group mb-3">
+                    <div class="card-body px-lg-5 py-lg-5">
+                        <form role="form" style="margin-top: 25px;margin-bottom: 25px;" [formGroup]="myForm">
+                            <div class="form-group mb-3" [ngClass]="{'focused':focus===true}">
                                 <div class="input-group input-group-alternative">
-                                    <input class="form-control" placeholder="awnser" type="text" (focus)="focus=true" (blur)="focus=false">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text"><i class="ni ni-email-83"></i></span>
+                                    </div>
+                                    <input class="form-control" placeholder="Email" type="email" (focus)="focus=true" (blur)="focus=false" formControlName="email">
                                 </div>
                             </div>
-                              <div class="text-center">
-                                  <button type="button" class="btn btn-primary my-4">Send</button>
-                              </div>
-                          </form>
-                      </div>
+                            <div class="form-group mb-3" ngbDropdown>
+                                <select class="form-control" (focus)="focus=true" (blur)="focus=false" formControlName="secretQuestion">
+                                    <option value="abc" selected>Favorite food ?</option>
+                                    <option value="abc">favourite Dog ?</option>
+                                    <option value="abc">Happ ?</option>
+                                </select>
+                            </div>
+                            <div class="form-group mb-3">
+                                <div class="input-group input-group-alternative">
+                                    <input class="form-control" placeholder="awnser" type="text" (focus)="focus=true" (blur)="focus=false" formControlName="answer">
+                                </div>
+                            </div>
+                            <div class="text-center">
+                                <button type="button" class="btn btn-outline-success" (click)="save()">Send</button>
+                            </div>
+                        </form>
+                        {{save()|json}}
+                    </div>
                   </div>
                       <div class="text-center">
                           <a [routerLink]="['/doctor/signup']" class="text-light">
@@ -54,6 +55,8 @@
                           </a>
                       </div>
               </div>
+
+
           </div>
       </div>
   </section>
