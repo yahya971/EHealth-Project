@@ -11,6 +11,7 @@ import { LoginComponent } from './login/login.component';
 import { LoginDoctorComponent } from './EHealth/login-doctor/login-doctor.component';
 import { DoctorSignupComponent } from './EHealth/doctor-signup/doctor-signup.component';
 import { DoctorForgottonPwComponent } from './EHealth/doctor-forgotton-pw/doctor-forgotton-pw.component';
+import { RechercheMedcinComponent } from './EHealth/recherche-medcin/recherche-medcin.component';
 
 const routes: Routes = [
     { path: 'doctor/signup', component: DoctorSignupComponent },
@@ -22,6 +23,7 @@ const routes: Routes = [
     { path: 'Argon/landing',          component: LandingComponent },
     { path: 'Argon/login', component: LoginComponent },
     { path: 'doctor/login', component: LoginDoctorComponent },
+    { path: 'doctor/recherche', component: RechercheMedcinComponent},
     { path: '', redirectTo: 'Argon/home', pathMatch: 'full' }
 ];
 
