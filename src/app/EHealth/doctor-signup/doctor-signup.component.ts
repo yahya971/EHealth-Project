@@ -33,7 +33,6 @@ export class DoctorSignupComponent implements OnInit {
 
 
     save() {
-        this.myFormResult = this.myForm.value;
-        console.log(this.myFormResult)
+        return this.myForm.value;
     }
 }
