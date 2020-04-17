@@ -8,14 +8,21 @@ import { ProfileComponent } from './profile/profile.component';
 import { SignupComponent } from './signup/signup.component';
 import { LandingComponent } from './landing/landing.component';
 import { LoginComponent } from './login/login.component';
+import { LoginDoctorComponent } from './EHealth/login-doctor/login-doctor.component';
+import { DoctorSignupComponent } from './EHealth/doctor-signup/doctor-signup.component';
+import { DoctorForgottonPwComponent } from './EHealth/doctor-forgotton-pw/doctor-forgotton-pw.component';
 
-const routes: Routes =[
-    { path: 'home',             component: HomeComponent },
-    { path: 'user-profile',     component: ProfileComponent },
-    { path: 'register',           component: SignupComponent },
-    { path: 'landing',          component: LandingComponent },
-    { path: 'login',          component: LoginComponent },
-    { path: '', redirectTo: 'home', pathMatch: 'full' }
+const routes: Routes = [
+    { path: 'doctor/signup', component: DoctorSignupComponent },
+    { path: 'doctor/forgottenPW', component: DoctorForgottonPwComponent },
+    { path: 'doctor/login', component: LoginDoctorComponent },
+    { path: 'Argon/home',             component: HomeComponent },
+    { path: 'Argon/user-profile',     component: ProfileComponent },
+    { path: 'Argon/register',           component: SignupComponent },
+    { path: 'Argon/landing',          component: LandingComponent },
+    { path: 'Argon/login', component: LoginComponent },
+    { path: 'doctor/login', component: LoginDoctorComponent },
+    { path: '', redirectTo: 'Argon/home', pathMatch: 'full' }
 ];
 
 @NgModule({
@@ -23,7 +30,7 @@ const routes: Routes =[
     CommonModule,
     BrowserModule,
     RouterModule.forRoot(routes,{
-      useHash: true
+
     })
   ],
   exports: [

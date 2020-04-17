@@ -15,6 +15,9 @@ import { FooterComponent } from './shared/footer/footer.component';
 
 import { HomeModule } from './home/home.module';
 import { LoginComponent } from './login/login.component';
+import { LoginDoctorComponent } from './EHealth/login-doctor/login-doctor.component';
+import { DoctorSignupComponent } from './EHealth/doctor-signup/doctor-signup.component';
+import { DoctorForgottonPwComponent } from './EHealth/doctor-forgotton-pw/doctor-forgotton-pw.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +27,10 @@ import { LoginComponent } from './login/login.component';
     ProfileComponent,
     NavbarComponent,
     FooterComponent,
-    LoginComponent
+    LoginComponent,
+    LoginDoctorComponent,
+    DoctorSignupComponent,
+    DoctorForgottonPwComponent
   ],
   imports: [
     BrowserModule,
