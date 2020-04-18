@@ -13,6 +13,8 @@ import { DoctorSignupComponent } from './EHealth/doctor-signup/doctor-signup.com
 import { DoctorForgottonPwComponent } from './EHealth/doctor-forgotton-pw/doctor-forgotton-pw.component';
 import { PatientLoginComponent } from './EHealth/Patient/patient-login/patient-login.component';
 import { PatientSignupComponent } from './EHealth/Patient/patient-signup/patient-signup.component';
+import { RechercheMedcinComponent } from './EHealth/recherche-medcin/recherche-medcin.component';
+
 
 const routes: Routes = [
     { path: 'doctor/signup', component: DoctorSignupComponent },
@@ -26,7 +28,8 @@ const routes: Routes = [
     { path: 'Argon/landing',          component: LandingComponent },
     { path: 'Argon/login', component: LoginComponent },
     { path: 'doctor/login', component: LoginDoctorComponent },
-    { path: '', redirectTo: 'doctor/login', pathMatch: 'full' }
+    { path: '', redirectTo: 'Argon/home', pathMatch: 'full' },
+    { path: 'doctor/recherche', component: RechercheMedcinComponent }
 ];
 
 @NgModule({
