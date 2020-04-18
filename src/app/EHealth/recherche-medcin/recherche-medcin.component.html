@@ -15,60 +15,97 @@
         </div>
         <div class="container pt-lg-md">
             <div class="row justify-content-center">
-                <div class="col-lg-7">
+                <div class="col-lg-12">
                     <div class="card bg-secondary shadow border-0">
                         <div class="card-header bg-white pb-5" style="text-align:center  ">
-                            <div class="text-muted text-center mb-3">
-                                <i class="ni ni-sound-wave"></i>
-                                <large>  Hello Doctor</large>
+
+                            <!-- search bar goes here-->
+                            <div class="alert alert-primary" role="alert">
+                                <strong>Cherchant Un Docteur ?!</strong>
                             </div>
-                            <img class="img-fluid shadow-sm" src="../../assets/img/EHealth/doctor.png" style="width:50%;height:50%" />
-                        </div>
-                        <div class="card-body px-lg-5 py-lg-5">
-                            <div class="text-center text-muted mb-4">
-                                <small>Sign in</small>
-                            </div>
-                            <form role="form">
-                                <div class="form-group mb-3" [ngClass]="{'focused':focus===true}">
-                                    <div class="input-group input-group-alternative">
-                                        <div class="input-group-prepend">
-                                            <span class="input-group-text"><i class="ni ni-email-83"></i></span>
+                            <form [formGroup]="myForm">
+                                <div class="row">
+                                    <div class="col-md-3" style="text-align:center">
+                                        <div class="form-group">
+                                            <div class="input-group mb-4">
+                                                <div class="input-group-prepend">
+                                                    <span class="input-group-text"><i class="ni ni-zoom-split-in"></i></span>
+                                                </div>
+                                                <input class="form-control" placeholder="Code Postal" type="text" formControlName="codePostal">
+                                            </div>
                                         </div>
-                                        <input class="form-control" placeholder="Email" type="email" (focus)="focus=true" (blur)="focus=false">
                                     </div>
-                                </div>
-                                <div class="form-group" [ngClass]="{'focused':focus1===true}">
-                                    <div class="input-group input-group-alternative">
-                                        <div class="input-group-prepend">
-                                            <span class="input-group-text"><i class="ni ni-lock-circle-open"></i></span>
+
+                                    <div class="col-md-3" style="text-align:center">
+                                        <div class="form-group">
+                                            <div class="input-group mb-4">
+                                                <div class="input-group-prepend">
+                                                    <span class="input-group-text"><i class="ni ni-zoom-split-in"></i></span>
+                                                </div>
+                                                <input class="form-control" placeholder="Ville" type="text" formControlName="ville">
+                                            </div>
                                         </div>
-                                        <input class="form-control" placeholder="Password" type="password" (focus)="focus1=true" (blur)="focus1=false">
                                     </div>
-                                </div>
-                                <div class="custom-control custom-control-alternative custom-checkbox">
-                                    <input class="custom-control-input" id=" customCheckLogin" type="checkbox">
-                                    <label class="custom-control-label" for=" customCheckLogin">
-                                        <span>Remember me</span>
-                                    </label>
-                                </div>
-                                <div class="text-center">
-                                    <button type="button" class="btn btn-primary my-4">Sign in</button>
+
+
+                                    <div class="col-md-3" style="text-align:center">
+                                        <div class="form-group">
+                                            <div class="input-group mb-4">
+                                                <div class="input-group-prepend">
+                                                    <span class="input-group-text">Specialite</span>
+                                                </div>
+                                                <select class="form-control" placeholder="Specialite" formControlName="specialite">
+                                                    <option class="form-control" value="genecologue">Genecologue</option>
+                                                    <option class="form-control" value="chirugien">Chirugien</option>
+                                                    <option class="form-control" value="othopediste">Orthopediste</option>
+
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3" style="text-align:center">
+                                        <button class="btn btn-danger " (click)="reset()">Reset</button>  
+                                    </div>
+                                    
                                 </div>
                             </form>
+                            <div  style="text-align:center">
+
+
+                            </div>
+
+
+
+                        </div>
+                        <div class="card-body px-lg-5 py-lg-5">
+
+                            <!-- table of results goes here-->
+                            <table class="table table-bordered">
+                                <thead >
+                                    <tr class="bg-info" style="text-align:center">
+                                        <th scope="col">#</th>
+                                        <th scope="col">Nom</th>
+                                        <th scope="col">Prenom</th>
+                                        <th scope="col">Telephone</th>
+                                        <th scope="col">Rendez-vs</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr *ngFor="let doctor of filterDoctors();let i=index" style="text-align:center">
+                                        <th scope="row">{{i+1}}</th>
+                                        <td>{{doctor.nom}}</td>
+                                        <td>{{doctor.prenom}}</td>
+                                        <td>{{doctor.telephone}}</td>
+                                        <td><button class="btn btn-success btn-sm" >Reserver</button></td>
+                                    </tr>
+                                   
+                                </tbody>
+                            </table>
+
+
                         </div>
                     </div>
-                    <div class="row mt-3">
-                        <div class="col-6">
-                            <a [routerLink]="['/doctor/forgottenPW']" class="text-light">
-                                <small>Forgot password?</small>
-                            </a>
-                        </div>
-                        <div class="col-6 text-right">
-                            <a [routerLink]="['/doctor/signup']" class="text-light">
-                                <small>Create new account</small>
-                            </a>
-                        </div>
-                    </div>
+                   
                 </div>
             </div>
         </div>

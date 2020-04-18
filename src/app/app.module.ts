@@ -21,6 +21,7 @@ import { DoctorForgottonPwComponent } from './EHealth/doctor-forgotton-pw/doctor
 import { RechercheMedcinComponent } from './EHealth/recherche-medcin/recherche-medcin.component';
 import { PatientLoginComponent } from './EHealth/Patient/patient-login/patient-login.component';
 import { PatientSignupComponent } from './EHealth/Patient/patient-signup/patient-signup.component';
+import { FilterDoctorPipe } from './Pipes/filter-doctor.pipe';
 
 
 @NgModule({
@@ -37,7 +38,8 @@ import { PatientSignupComponent } from './EHealth/Patient/patient-signup/patient
         DoctorForgottonPwComponent,
         PatientLoginComponent,
         PatientSignupComponent,
-        RechercheMedcinComponent
+        RechercheMedcinComponent,
+        FilterDoctorPipe
 
   ],
   imports: [
