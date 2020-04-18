@@ -1,0 +1,145 @@
+<main>
+    <section class="section section-shaped section-lg">
+        <div class="shape shape-style-1 shape-primary">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div class="container pt-lg-md">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="card bg-secondary shadow border-0">
+
+                        <div class="card-body px-lg-5 py-lg-5">
+                            <div class="text-center text-muted mb-4">
+                                <h3 style="font-family:'Open Sans, sans-serif;'">
+                                    Inscription Patient
+                                </h3>
+                            </div>
+
+
+
+
+                            <!-- form goes here-->
+                            <form [formGroup]="myForm">
+
+                                <div class="form-group mb-3" [ngClass]="{'focused':focus===true}">
+                                    <div class="input-group input-group-alternative">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text"><i class="ni ni-circle-08"></i></span>
+                                        </div>
+                                        <input class="form-control" placeholder="Nom" type="text" (focus)="focus=true" (blur)="focus=false" formControlName="nom">
+                                    </div>
+                                </div>
+
+                                <div class="form-group mb-3" [ngClass]="{'focused':focus===true}">
+                                    <div class="input-group input-group-alternative">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text"><i class="ni ni-circle-08"></i></span>
+                                        </div>
+                                        <input class="form-control" placeholder="Prenom" type="text" (focus)="focus=true" (blur)="focus=false" formControlName="prenom">
+                                    </div>
+                                </div>
+
+                                <div class="form-group mb-3" [ngClass]="{'focused':focus===true}">
+                                    <div class="input-group input-group-alternative">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text"><i class="ni ni-calendar-grid-58"></i></span>
+                                        </div>
+                                        <input class="form-control" placeholder="Date De Naissance" type="date" (focus)="focus=true" (blur)="focus=false" formControlName="date">
+                                    </div>
+                                </div>
+
+
+                                <div class="form-group mb-3" [ngClass]="{'focused':focus===true}">
+                                    <div class="input-group input-group-alternative">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text"><i class="ni ni-collection"></i></span>
+                                        </div>
+                                        <input class="form-control" placeholder="Telephone" type="text" (focus)="focus=true" (blur)="focus=false" formControlName="telephone">
+                                    </div>
+                                </div>
+                                <div class="form-group mb-3" [ngClass]="{'focused':focus===true}">
+                                    <div class="input-group input-group-alternative">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text"><i class="ni ni-email-83"></i></span>
+                                        </div>
+                                        <input class="form-control" placeholder="Email" type="email" (focus)="focus=true" (blur)="focus=false" formControlName="email">
+                                    </div>
+                                </div>
+                                <div class="form-group mb-3" [ngClass]="{'focused':focus===true}">
+                                    <div class="input-group input-group-alternative">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text"><i class="ni ni-key-25"></i></span>
+                                        </div>
+                                        <input class="form-control" placeholder="Mot De Passe" type="password" (focus)="focus=true" (blur)="focus=false" formControlName="password">
+                                    </div>
+                                </div>
+
+                                <div class="form-group mb-3" [ngClass]="{'focused':focus===true}">
+                                    <div class="input-group input-group-alternative">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text"><i class="ni ni-active-40"></i></span>
+                                        </div>
+                                        <input class="form-control" placeholder="Code Postal" type="text" (focus)="focus=true" (blur)="focus=false" formControlName="codePostal">
+                                    </div>
+                                </div>
+
+                                <div class="form-group mb-3" [ngClass]="{'focused':focus===true}">
+                                    <div class="input-group input-group-alternative">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text"><i class="ni ni-world-2"></i></span>
+                                        </div>
+                                        <input class="form-control" placeholder="Ville" type="text" (focus)="focus=true" (blur)="focus=false" formControlName="ville">
+                                    </div>
+                                </div>
+
+                                <div class="form-group mb-3" [ngClass]="{'focused':focus===true}">
+                                    <div class="input-group input-group-alternative">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text"><i class="ni ni-square-pin"></i></span>
+                                        </div>
+                                        <input class="form-control" placeholder="Adresse" type="text" (focus)="focus=true" (blur)="focus=false" formControlName="adresse">
+                                    </div>
+                                </div>
+
+                                <div class="form-group mb-3" [ngClass]="{'focused':focus===true}">
+                                    <div class="input-group input-group-alternative">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text"><i class="ni ni-tag"></i></span>
+                                        </div>
+                                        <input class="form-control" placeholder="Question Secrete" type="text" (focus)="focus=true" (blur)="focus=false" formControlName="secretQuestion">
+                                    </div>
+                                </div>
+
+                                <div class="form-group mb-3" [ngClass]="{'focused':focus===true}">
+                                    <div class="input-group input-group-alternative">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text"><i class="ni ni-paper-diploma"></i></span>
+                                        </div>
+                                        <input class="form-control" placeholder="Reponse" type="text" (focus)="focus=true" (blur)="focus=false" formControlName="answer">
+                                    </div>
+                                </div>
+
+                                <button type="button" class="btn btn-outline-success" (click)="save()">Save</button>
+                            </form>
+
+                            {{save()|json}}
+
+
+                        </div>
+                    </div>
+
+
+
+
+                </div>
+            </div>
+        </div>
+    </section>
+</main>

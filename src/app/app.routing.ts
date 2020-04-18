@@ -11,10 +11,14 @@ import { LoginComponent } from './login/login.component';
 import { LoginDoctorComponent } from './EHealth/login-doctor/login-doctor.component';
 import { DoctorSignupComponent } from './EHealth/doctor-signup/doctor-signup.component';
 import { DoctorForgottonPwComponent } from './EHealth/doctor-forgotton-pw/doctor-forgotton-pw.component';
+import { PatientLoginComponent } from './EHealth/Patient/patient-login/patient-login.component';
+import { PatientSignupComponent } from './EHealth/Patient/patient-signup/patient-signup.component';
 
 const routes: Routes = [
     { path: 'doctor/signup', component: DoctorSignupComponent },
-    { path: 'doctor/forgottenPW', component: DoctorForgottonPwComponent },
+    { path: 'patient/login', component: PatientLoginComponent },
+    { path: 'patient/signup', component: PatientSignupComponent },
+    { path: 'forgottenPW', component: DoctorForgottonPwComponent },
     { path: 'doctor/login', component: LoginDoctorComponent },
     { path: 'Argon/home',             component: HomeComponent },
     { path: 'Argon/user-profile',     component: ProfileComponent },
@@ -22,7 +26,7 @@ const routes: Routes = [
     { path: 'Argon/landing',          component: LandingComponent },
     { path: 'Argon/login', component: LoginComponent },
     { path: 'doctor/login', component: LoginDoctorComponent },
-    { path: '', redirectTo: 'Argon/home', pathMatch: 'full' }
+    { path: '', redirectTo: 'doctor/login', pathMatch: 'full' }
 ];
 
 @NgModule({

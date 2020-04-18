@@ -18,6 +18,8 @@ import { LoginComponent } from './login/login.component';
 import { LoginDoctorComponent } from './EHealth/login-doctor/login-doctor.component';
 import { DoctorSignupComponent } from './EHealth/doctor-signup/doctor-signup.component';
 import { DoctorForgottonPwComponent } from './EHealth/doctor-forgotton-pw/doctor-forgotton-pw.component';
+import { PatientLoginComponent } from './EHealth/Patient/patient-login/patient-login.component';
+import { PatientSignupComponent } from './EHealth/Patient/patient-signup/patient-signup.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +32,9 @@ import { DoctorForgottonPwComponent } from './EHealth/doctor-forgotton-pw/doctor
     LoginComponent,
     LoginDoctorComponent,
     DoctorSignupComponent,
-    DoctorForgottonPwComponent
+    DoctorForgottonPwComponent,
+    PatientLoginComponent,
+    PatientSignupComponent
   ],
   imports: [
     BrowserModule,

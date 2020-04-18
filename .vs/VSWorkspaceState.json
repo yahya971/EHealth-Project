@@ -1,6 +1,16 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\src",
+    "\\src\\app",
+    "\\src\\app\\EHealth",
+    "\\src\\app\\EHealth\\doctor-forgotton-pw",
+    "\\src\\app\\EHealth\\doctor-signup",
+    "\\src\\app\\login",
+    "\\src\\app\\shared",
+    "\\src\\app\\shared\\navbar",
+    "\\src\\assets"
   ],
+  "SelectedNode": "\\src\\app\\EHealth\\doctor-forgotton-pw\\doctor-forgotton-pw.component.ts",
   "PreviewInSolutionExplorer": false
 }
