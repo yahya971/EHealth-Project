@@ -4,13 +4,13 @@
     "\\src",
     "\\src\\app",
     "\\src\\app\\EHealth",
-    "\\src\\app\\EHealth\\doctor-forgotton-pw",
     "\\src\\app\\EHealth\\doctor-signup",
-    "\\src\\app\\login",
-    "\\src\\app\\shared",
+    "\\src\\app\\EHealth\\Patient\\patient-signup",
+    "\\src\\app\\EHealth\\recherche-medcin",
+    "\\src\\app\\Pipes",
     "\\src\\app\\shared\\navbar",
     "\\src\\assets"
   ],
-  "SelectedNode": "\\src\\app\\EHealth\\doctor-forgotton-pw\\doctor-forgotton-pw.component.ts",
+  "SelectedNode": "\\src\\app\\EHealth\\recherche-medcin\\recherche-medcin.component.ts",
   "PreviewInSolutionExplorer": false
 }
